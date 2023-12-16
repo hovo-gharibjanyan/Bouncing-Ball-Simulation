@@ -57,7 +57,7 @@ class BouncingBall {
     setupRadiusChange() {
         const radiusInput = document.getElementById('radiusInput');
         radiusInput.addEventListener('change', (event) => {
-            const newRadius = parseInt(event.target.value);
+            const newRadius = Number(event.target.value);
             if (!isNaN(newRadius) && newRadius > 0) {
                 this.applyNewRadius = true;
             } else {
