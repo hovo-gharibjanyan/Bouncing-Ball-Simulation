@@ -58,7 +58,7 @@ class BouncingPlanets {
       const newBall = {
         x: event.clientX - this.canvas.getBoundingClientRect().left,
         y: event.clientY - this.canvas.getBoundingClientRect().top,
-        radius: this.applyNewRadius ? parseInt(document.getElementById('radiusInput').value) : 25,
+        radius: this.applyNewRadius ? Number(document.getElementById('radiusInput').value) : 25,
         vx: parseFloat(document.getElementById('vxInput').value) || 0,
         vy: parseFloat(document.getElementById('vyInput').value) || 0,
         gravity: parseFloat(document.getElementById('gravityInput').value),
