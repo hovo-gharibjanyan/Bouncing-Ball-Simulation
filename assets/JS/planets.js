@@ -54,32 +54,33 @@ class BouncingPlanets {
   }
 
   static init() {
-    this.canvas.addEventListener('click', (event) => {
-      const newBall = {
-        x: event.clientX - this.canvas.getBoundingClientRect().left,
-        y: event.clientY - this.canvas.getBoundingClientRect().top,
-        radius: this.applyNewRadius ? Number(document.getElementById('radiusInput').value) : 25,
-        vx: parseFloat(document.getElementById('vxInput').value) || 0,
-        vy: parseFloat(document.getElementById('vyInput').value) || 0,
-        gravity: parseFloat(document.getElementById('gravityInput').value),
-        elasticity: parseFloat(document.getElementById('elasticityInput').value) || 0,
-      };
-      this.balls.push(newBall);
-    });
-
-    this.update();
-  }
-
-  static setupRadiusChange() {
     const radiusInput = document.getElementById('radiusInput');
     radiusInput.addEventListener('change', (event) => {
-      const newRadius = parseInt(event.target.value);
+      const newRadius = Number(event.target.value);
       if (!isNaN(newRadius) && newRadius > 0) {
         this.applyNewRadius = true;
       } else {
         this.applyNewRadius = false;
       }
     });
+
+    this.canvas.addEventListener('click', (event) => {
+      const newRadius = this.applyNewRadius ? Number(document.getElementById('radiusInput').value) : 25;
+
+      const newBall = {
+        x: event.clientX - this.canvas.getBoundingClientRect().left,
+        y: event.clientY - this.canvas.getBoundingClientRect().top,
+        radius: newRadius,
+        vx: parseFloat(document.getElementById('vxInput').value) || 0,
+        vy: parseFloat(document.getElementById('vyInput').value) || 0,
+        gravity: parseFloat(document.getElementById('gravityInput').value),
+        elasticity: parseFloat(document.getElementById('elasticityInput').value) || 0,
+      };
+
+      this.balls.push(newBall);
+    });
+
+    this.update();
   }
 
   static setupPropertiesChange() {
