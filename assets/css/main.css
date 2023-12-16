@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/wall3.jpg);
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.296);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.game{
+    height: 250px;
+    width: 250px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.448);
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.296);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.game:hover{
+    opacity: 1;
+    box-shadow: 2px 2px 10px white;
+    transition: 0.3s;
+}
+.text-side h1{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    text-transform: capitalize;
+}
+.game-side{
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.football{
+    background-image: url(../img/football.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.basketball{
+    background-image: url(../img/basketball.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.volleyball{
+    background-image: url(../img/volleyball.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.imagine{ 
+    background-image: url(../img/imagine.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.block{
+    display: flex;
+}
+.block a{
+    text-decoration: none;
+}
+.block div { 
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.game p{ 
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}

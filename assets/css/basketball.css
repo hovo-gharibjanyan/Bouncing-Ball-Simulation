@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#myCanvas {
+    background-image: url('../img/basketballPlace.jpg');
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.403);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.basketball {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/basketballWall.jpeg');
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.115);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.controls label {
+    display: flex;
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.controls input{
+    height: 25px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 1rem;
+    border: 1px solid black;
+}
